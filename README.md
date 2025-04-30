@@ -1,2 +1,3 @@
 # Profile-Card
-![System Diagram](assets/diagram.png)
+![Screenshot](images/your-image.png)
+
