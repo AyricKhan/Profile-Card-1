@@ -1,16 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Personal Profile Card</title>
-  <link rel="stylesheet" href="style.css">
-  <script defer src="script.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #dfe9f3, #ffffff);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .card {
+      background: #fcfcfc;
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2), inset 0 0 10px rgba(0, 0, 0, 0.05);
+      text-align: center;
+      width: 90%;
+      max-width: 360px;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 30px rgba(0, 0, 0, 0.25), inset 0 0 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .profile-img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 50%;
+      object-position: center top;
+      border: 4px solid #c0c0c0;
+    }
+
+    #name {
+      margin-top: 1rem;
+      font-size: 1.9rem;
+      color: #2a2a2a;
+      transition: color 0.3s;
+    }
+
+    #name:hover {
+      color: #0077cc;
+    }
+
+    .bio {
+      margin: 0.5rem 0 1rem;
+      color: #555;
+    }
+
+    #toggle-btn {
+      background: #0077cc;
+      color: white;
+      padding: 0.5rem 1.2rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    #toggle-btn:hover {
+      background: #005fa3;
+    }
+
+    #hobby-list {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0;
+    }
+
+    #hobby-list li {
+      margin: 0.4rem 0;
+      color: #444;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .socials {
+      margin-top: 1.2rem;
+    }
+
+    .socials a {
+      text-decoration: none;
+      color: #0077cc;
+      margin: 0 0.5rem;
+      font-size: 1.5rem;
+      transition: color 0.3s;
+    }
+
+    .socials a:hover {
+      color: #663399;
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        padding: 1.5rem;
+      }
+
+      #name {
+        font-size: 1.5rem;
+      }
+
+      .profile-img {
+        width: 120px;
+        height: 120px;
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="card">
-    <img src="images/my.jpg" alt="Profile Photo" class="profile-img">
+    <img src="images/my.jpg" alt="Profile Photo" class="profile-img" />
     <h1 id="name">Revanth Bandaru</h1>
     <p class="bio">Aspiring web developer passionate about design, code, and Repeat🔁.</p>
 
@@ -21,13 +131,23 @@
     </ul>
 
     <div class="socials">
-        <a href="https://www.linkedin.com/in/revanth-bandaru/" target="_blank">
-         <i class="fab fa-linkedin"></i>
-          </a>
+      <a href="https://www.linkedin.com/in/revanth-bandaru/" target="_blank">
+        <i class="fab fa-linkedin"></i>
+      </a>
       <a href="https://github.com/revanth0307" target="_blank">
         <i class="fab fa-github"></i>
-    </a>
+      </a>
     </div>
   </div>
+
+  <script>
+    const toggleBtn = document.getElementById("toggle-btn");
+    const hobbyList = document.getElementById("hobby-list");
+
+    toggleBtn.addEventListener("click", () => {
+      hobbyList.classList.toggle("hidden");
+      toggleBtn.textContent = hobbyList.classList.contains("hidden") ? "Show Hobbies" : "Hide Hobbies";
+    });
+  </script>
 </body>
 </html>
