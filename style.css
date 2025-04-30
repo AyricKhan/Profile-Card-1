@@ -1,0 +1,120 @@
+/* Global styles */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg,lightblue, #fdf5e661);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  /* Card styles */
+  .card {
+    background:lightcyan;
+    background:ol;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    text-align: center;
+    width: 90%;
+    max-width: 350px;
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-8px);
+  }
+  
+  /* Profile image */
+  .profile-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    object-position: center top; 
+    border: 3px solid lightgrey;
+  }
+  
+  /* Name */
+  #name {
+    margin-top: 1rem;
+    font-size: 1.8rem;
+    color: #333;
+    transition: color 0.3s;
+  }
+  
+  #name:hover {
+    color: #2575fc;
+  }
+  
+  /* Bio */
+  .bio {
+    margin: 0.5rem 0 1rem;
+    color: #555;
+  }
+  
+  /* Button */
+  #toggle-btn {
+    background: #2575fc;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  #toggle-btn:hover {
+    background: #1a5dcc;
+  }
+  
+  /* Hobbies list */
+  #hobby-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+  }
+  
+  #hobby-list li {
+    margin: 0.3rem 0;
+    color: #444;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  /* Social media icons */
+  .socials {
+    margin-top: 1rem;
+  }
+  
+  .socials a {
+    text-decoration: none;
+    color: #2575fc;
+    margin: 0 0.5rem;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+  }
+  
+  .socials a:hover {
+    color: #6a11cb;
+  }
+  
+  /* Responsive */
+  @media (max-width: 480px) {
+    .card {
+      padding: 1.5rem;
+    }
+  
+    #name {
+      font-size: 1.5rem;
+    }
+  
+    .profile-img {
+      width: 100px;
+      height: 100px;
+    }
+  }
+  
